@@ -90,24 +90,137 @@
     <h2>谷歌搜索</h2>
     <form action="https://www.google.com.hk/search" target="_blank">
         <input type="text" name="q">
+        <input hidden type="text" name="ie" value="UTF-8">
+        <input hidden type="text" name="sourceid" value="UTF">
+        <button type="submit">在新窗口打开搜索结果</button>
+        </form>
+        <hr>
         
-    </form>
+        <form action="">
+            <p>个人信息调查表</p>
+            <dl>
+                <dt>性别
+                <dd>
+                    <label for=""><input type="radio" name="gender" value="male">男</label>
+                    <label for=""><input type="radio" name="gender" value="female">女</label>
+                </dd>
+                </dt>
+        
+                <dt>年龄</dt>
+                <dd>
+                    <select name="age" id="">
+                        <option value="" hidden>请选择</option>
+                        <optgroup label="少年">
+                            <option value="1-6">1到6岁</option>
+                            <option value="6-12">6到12岁</option>
+                        </optgroup>
+                        <optgroup label="青年">
+                            <option value="13-15">13到15岁</option>
+                            <option value="16-18">16到18岁</option>
+                        </optgroup>
+                        <optgroup label="少年">
+                            <option value="1-6">1到6岁</option>
+                            <option value="6-12">6到12岁</option>
+                        </optgroup>
+                    </select>
+        
+                <dt>生日</dt>
+                <dd>
+                    <input type="date" value="2021-11-04" name="birthday">
+                </dd>
+        
+                <dt>生辰</dt>
+                <dd>
+                    <input type="time" name="birthtime">
+                </dd>
+        
+                <dt>照片</dt>
+                <dd>
+                    <input hidden type="file" name="avatar" id="avatar-upload">
+                    <label for="avatar-upload">点我上传照片，我比文件上传按钮好看</label>
+                </dd>
+        
+                <dt>自我介绍</dt>
+                <dd>
+                    <textarea name="intro" id="" cols="30" rows="10">&lt;/textarea></textarea>
+                </dd>
+                </dl>
 
+            <fieldset disabled>
+                <legend>这里全部禁用了</legend>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </fieldset>
+            
+            <button>提交</button>
+            <button type="reset">重置</button>
+            </form>
 
+    <hr>
 
+    <table border="1">
+        <colgroup>
+            <col>
+            <col bgcolor="red">
+        </colgroup>
 
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>品名</th>
+                <th>进价</th>
+                <th>出价</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>aaa</th>
+                <td>a</td>
+                <td rowspan="2">a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+        </tbody>
+        </table>
+        
+        <hr>
+
+    <img usemap="#map1" width="300"
+        src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="">
+    <map name="map1">
+        <area shape="rect" coords="202 196 56 105" href="https://www.jd.com/" alt="" target="_blank">
+        <area shape="circle" coords="152 308 150" href="https://www.jd.com/" alt="" target="_blank">
+    </map>
     
+    <hr>
 
+    <a href="https://www.mi.com/" target="buttom-frame">小米</a>
+    <div></div>
+    <iframe src="https://www.nodejs.org/" frameborder="1" name="buttom-frame"></iframe>
 
-
-
-
-
-
-
-
-
-
+    <div>aaaa &nbsp;&nbsp;&nbsp;&nbsp; bbbbb</div>
+    <pre>aaaa         bbbbb</pre>
+    
+    >>>>>>>>>>>>>>>>>>>>>>&lt;<<<<<<<<<<<<<<<<<< &lt;span&gt; &lt;/span&gt;
 
 
     <div id="dibu"></div>

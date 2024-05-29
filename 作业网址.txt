@@ -1,2 +1,13 @@
-5.26
+练习css选择器
 https://flukeout.github.io/
+双拼练习
+https://api.ihint.me/shuang/
+大喵网站
+https://class.damiaoedu.com:44313/Main_Login.asp
+html代码批改
+https://validator.w3.org/#validate_by_uri
+html标签学习
+https://developer.mozilla.org/zh-CN/
+网页前端预览
+https://jsbin.com/?html,output
+

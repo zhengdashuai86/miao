@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/xeneroqete/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+* {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: inset 0 0 1px red;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: black;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  width: 600px;
+  margin: auto;
+}
+
+main {
+  width: 600px;
+  margin: 20px auto;
+}
+
+
+.grid {
+  width: 600px;
+  margin: auto;
+}
+.item {
+  width: 180px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 3px solid red;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 34px;
+}
+
+.item:nth-child(n+5) {
+  margin-left: 210px;
+}
+.item:nth-child(n+9) {
+  margin-left: 420px;
+}
+.item:nth-child(4n+5) {
+  margin-top: -220px;
+}
+
+
+ul.links {
+  width: 600px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.links > li {
+  border-bottom: 1px dotted ;
+  margin-bottom: -1px;
+}
+
+footer {
+  background-color: violet;
+  text-align: center;
+}
+
+.grid2 {
+  width: 600px;
+  margin: auto;
+  font-size: 0;
+}
+.item2 {
+  xmargin-right: 30px;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 180px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 3px solid red;
+  font-size: 16px;
+}
+
+.item2:not(:nth-child(3n+3)) {
+  margin-right: 30px;
+}
+
+
+.grid3-wrapper {
+  width: 600px;
+  background-color: pink;
+  margin: auto;
+  overflow: hidden;
+}
+.grid3 {
+  xwidth: 630px;
+  margin: auto;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  font-size: 0;
+}
+.item3 {
+  width: 96px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 3px solid red;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 15px;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="header">hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</div>
+  </header>
+  
+  <main>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</main>
+  
+  <section class="grid">
+    <div class="item">aaa</div>
+    <div class="item">宽180高40(包含边框)</div>
+    <div class="item">f</div>
+    <div class="item">p</div>
+    <div class="item">人</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </section>
+  
+  <ul class="links">
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+  </ul>
+  <footer></footer>
+</body>
+</html>

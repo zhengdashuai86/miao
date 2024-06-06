@@ -21,51 +21,52 @@ Released under the MIT license: http://jsbin.mit-license.org
 
     .red1 {
       background-color: red;
-      margin: 1em;
-      padding-left: calc((100% - 400px - 2em) / 2);
-      padding-right: calc(50% - 200px - 1em);
+      width: 500px;
+      margin: auto;
+      padding-left: calc(50% - 250px);
+      padding-right: calc(50% - 250px);
     }
 
     .red {
       background-color: red;
-      margin: 20px;
     }
 
     .red-inner {
-      width: 400px;
+      width: 500px;
       margin: auto;
+      margin-top: 20px;
     }
 
     main {
-      border: 2px solid;
-      width: 400px;
+      border: 5px solid;
+      width: 600px;
       margin: auto;
-      box-sizing: border-box;
-      padding: 1em;
+      margin-top: 20px;
     }
 
-    main div {
-      height: 2em;
+    main div:hover {
+      width: 550px;
+    }
+
+    main > div {
       background-color: pink;
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-
-    main p {
-      height: 3em;
-      margin: 0;
-      overflow: auto;
-    }
-
-    .triangle {
-      border: 50px solid;
-      border-color: transparent;
-      border-bottom-color: gold;
-      height: 0px;
-      width: 0px;
+      width: 500px;
+      height: 20px;
       margin: auto;
-      margin-top: 1em;
     }
+
+    p {
+      overflow: auto;
+      height: 2em;
+    }
+
+
+  .triangle {
+    border: 40px solid transparent;
+    border-bottom-color: gold;
+    width: 0;
+    margin: auto;
+  }
   </style>
 </head>
 

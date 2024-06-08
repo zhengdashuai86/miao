@@ -12,4 +12,7 @@ html标签学习
 https://developer.mozilla.org/zh-CN/
 网页前端预览
 https://jsbin.com/?html,output
-
+学习缓动中时间函数的效果
+https://cubic-bezier.com/#.11,.79,.58,.79
+学习flexbox
+https://flexboxfroggy.com/

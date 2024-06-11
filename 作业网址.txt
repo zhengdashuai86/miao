@@ -1,6 +1,6 @@
 自己的github里面的html的预览
 https://zhengdashuai86.github.io/miao/文件名
-练习css选择器
+练习css选择器游戏
 https://flukeout.github.io/
 双拼练习
 https://api.ihint.me/shuang/
@@ -14,5 +14,5 @@ https://developer.mozilla.org/zh-CN/
 https://jsbin.com/?html,output
 学习缓动中时间函数的效果
 https://cubic-bezier.com/#.11,.79,.58,.79
-学习flexbox
+学习flexbox游戏
 https://flexboxfroggy.com/

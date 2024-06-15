@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://damiaoedu.com/ly.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style id="jsbin-css">
+    * {
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    html {
+      zoom: 2;
+    }
+
+    body {
+      margin-top: 50px;
+    }
+
+    @keyframes rotatey {
+      from {
+        transform: rotatey(0deg);
+      }
+
+      to {
+        transform: rotatey(360deg);
+      }
+    }
+
+    @keyframes rotatex {
+      from {
+        transform: rotatex(0deg);
+      }
+
+      to {
+        transform: rotatex(360deg);
+      }
+    }
+
+    @keyframes movez {
+
+      from,
+      to {
+        transform: translatez(var(--from));
+      }
+
+      50% {
+        transform: translatez(var(--to));
+      }
+    }
+
+    div {
+      border: 1px solid;
+      float: left;
+      margin: 5px;
+      perspective: 70px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+
+    @keyframes pers-move {
+
+      from,
+      to {
+        perspective-origin: var(--h) 50%;
+      }
+
+      50% {
+        perspective-origin: var(--h) 50%;
+      }
+    }
+
+    div:nth-child(1) {
+      animation: pers-move 3s infinite;
+      --h: 45%;
+      xperspective-origin: 45% 30%;
+    }
+
+    div:nth-child(2) {
+      animation: pers-move 3s infinite;
+      --h: 55%;
+      xperspective-origin: 55% 30%;
+    }
+
+    span {
+      display: inline-block;
+      animation: movez var(--time) infinite
+    }
+
+    span:nth-child(1) {
+      background-color: pink;
+      /* transform: translatez(-30px); */
+      --from: 10px;
+      --to: -550px;
+      --time: 9s;
+    }
+
+    span:nth-child(2) {
+      background-color: tan;
+      --from: 20px;
+      --to: -170px;
+      --time: 5s;
+      /* transform: translatez(-70px); */
+    }
+
+    span:nth-child(3) {
+      background-color: brown;
+      --from: 10px;
+      --to: -250px;
+      --time: 7s;
+      /* transform: translatez(-50px); */
+    }
+
+    section {
+      margin-top: 50px;
+      width: 50px;
+      height: 50px;
+      animation: rotatey 3s linear infinite;
+      background-color: red;
+      background-image: url(https://travel.12306.cn/imgs/resources/uploadfiles/images/b0c76b21-531b-4af4-a607-cf5672c72ded_product_W572_H370.jpg);
+      background-size: 100% 100%;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      animation: rotatex 5s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>aa</span>
+    <span>bb</span>
+    <span>cc</span>
+    <section></section>
+    <img src="./JS Bin_files/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="">
+  </div>
+
+  <div>
+    <span>aa</span>
+    <span>bb</span>
+    <span>cc</span>
+    <section></section>
+    <img src="./JS Bin_files/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="">
+  </div>
+
+
+
+</body></html>

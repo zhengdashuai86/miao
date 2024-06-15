@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/kabidanape/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<!-- 使用jsbin打开才能效果正常，文档存在较多的问题 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style id="jsbin-css">
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    input::placeholder {
+      color: red;
+    }
+
+    div {
+      padding: 20px;
+      border: 2px solid;
+    }
+
+    div:has(input:checked) {
+      border-color: red;
+    }
+
+
+    tr:hover {
+      background-color: yellow;
+    }
+
+    table:has(td:nth-child(1):hover) td:nth-child(1) {
+      background-color: yellow;
+    }
+
+
+    table:has(td:nth-child(2):hover) td:nth-child(2) {
+      background-color: yellow;
+    }
+
+
+    table:has(td:nth-child(3):hover) td:nth-child(3) {
+      background-color: yellow;
+    }
+
+    table {
+      overflow: hidden;
+    }
+
+    td {
+      position: relative;
+
+      &::before {
+        content: '';
+        display: none;
+      }
+
+      &:hover::before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 99999px;
+        top: -88888px;
+        background-color: pink;
+        z-index: -2;
+      }
+    }
+
+    li::marker {
+      color: red;
+    }
+
+    ul::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      background-color: red;
+    }
+
+    ul::-webkit-scorllbar-thumb {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" placeholder="please">
+  <div>
+    <input type="checkbox">
+  </div>
+  <!-- table>tr*7>td*8>lorem1 -->
+  <table>
+    <tr>
+      <td>Lorem.</td>
+      <td>Corporis.</td>
+      <td>Impedit!</td>
+      <td>Atque.</td>
+      <td>Iusto?</td>
+      <td>Laborum.</td>
+      <td>Atque.</td>
+      <td>Dignissimos.</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Quas.</td>
+      <td>Autem!</td>
+      <td>Ipsum.</td>
+      <td>Qui!</td>
+      <td>Ad!</td>
+      <td>Omnis.</td>
+      <td>Neque?</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Asperiores.</td>
+      <td>Labore.</td>
+      <td>A.</td>
+      <td>Minus.</td>
+      <td>Tempore.</td>
+      <td>Ea!</td>
+      <td>Possimus.</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Aperiam.</td>
+      <td>Molestias.</td>
+      <td>Nobis.</td>
+      <td>Consectetur.</td>
+      <td>Fugit.</td>
+      <td>Dolore?</td>
+      <td>Consectetur.</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Deserunt!</td>
+      <td>Minima!</td>
+      <td>Ipsa.</td>
+      <td>Voluptatum!</td>
+      <td>Sint?</td>
+      <td>Maiores.</td>
+      <td>Dignissimos!</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Id!</td>
+      <td>Molestiae.</td>
+      <td>Officiis!</td>
+      <td>Ab!</td>
+      <td>Tempora!</td>
+      <td>Quo.</td>
+      <td>Iste!</td>
+    </tr>
+    <tr>
+      <td>Lorem.</td>
+      <td>Velit!</td>
+      <td>Assumenda.</td>
+      <td>Voluptate!</td>
+      <td>Sunt.</td>
+      <td>Consequatur.</td>
+      <td>Officia.</td>
+      <td>Hic.</td>
+    </tr>
+  </table>
+  <ul>
+    <li>Lorem.</li>
+    <li>Accusamus.</li>
+    <li>Voluptate.</li>
+  </ul>
+</body>
+
+</html>

@@ -9,91 +9,92 @@ Released under the MIT license: http://jsbin.mit-license.org
 -->
 <meta name="robots" content="noindex">
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
-  <style id="jsbin-css">
-    body {
-      margin: 0;
-    }
+<style id="jsbin-css">
+* {
+  xbackground-color: rgba(0,0,0,0.08);
+  xbox-shadow: inset 0 0 1px red;
+}
+body {
+  margin: 0;
+}
 
-    .red1 {
-      background-color: red;
-      width: 500px;
-      margin: auto;
-      padding-left: calc(50% - 250px);
-      padding-right: calc(50% - 250px);
-    }
+.red1 {
+  background-color: red;
+  margin: 1em;
+  padding-left: calc((100% - 400px - 2em) / 2);
+  padding-right: calc(50% - 200px - 1em);
+}
 
-    .red {
-      background-color: red;
-    }
+.red {
+  margin: 20px;
+  background-color: red;
+}
+.red-inner {
+  width: 400px;
+  margin: auto;
+  background-color: red;
+}
 
-    .red-inner {
-      width: 500px;
-      margin: auto;
-      margin-top: 20px;
-    }
+main {
+  border: 2px solid;
+  width: 400px;
+  xheight: 50px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em;
+}
 
-    main {
-      border: 5px solid;
-      width: 600px;
-      margin: auto;
-      margin-top: 20px;
-    }
+main div {
+  height: 2em;
+  background-color: violet;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+main div:hover {
+  margin-left: -1em;
+  margin-right: -1em;
+}
 
-    main div:hover {
-      width: 550px;
-    }
-
-    main > div {
-      background-color: pink;
-      width: 500px;
-      height: 20px;
-      margin: auto;
-    }
-
-    p {
-      overflow: auto;
-      height: 2em;
-    }
+main p {
+  height: 3em;
+  margin: 0;
+  overflow: auto;
+}
 
 
-  .triangle {
-    border: 40px solid transparent;
-    border-bottom-color: gold;
-    width: 0;
-    margin: auto;
-  }
-  </style>
+.triangle {
+  border: 50px solid red;
+  border-color: transparent;
+  border-bottom-color: gold;
+  height: 0px;
+  width: 0px;
+  margin: auto;
+  margin-top: 1em;
+}
+
+
+
+</style>
 </head>
-
 <body>
-
+  
   <div class="red1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati illum inventore, atque nam vitae voluptatem,
-    aliquid recusandae! Eveniet temporibus veniam explicabo, obcaecati quidem nisi sapiente culpa in adipisci,
-    asperiores odit!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati illum inventore, atque nam vitae voluptatem, aliquid recusandae! Eveniet temporibus veniam explicabo, obcaecati quidem nisi sapiente culpa in adipisci, asperiores odit!
   </div>
   <div class="red">
-    <div class="red-inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sapiente explicabo quos
-      aliquid magni libero facere minima inventore nemo obcaecati illo atque in, asperiores earum sint veniam molestiae,
-      delectus maxime.</div>
+    <div class="red-inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sapiente explicabo quos aliquid magni libero facere minima inventore nemo obcaecati illo atque in, asperiores earum sint veniam molestiae, delectus maxime.</div>
   </div>
-
+  
   <main>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, praesentium saepe nam sint repellendus
-      perspiciatis ipsam, necessitatibus obcaecati ipsum at, impedit sunt. Sit consequuntur, placeat quae accusamus
-      voluptas voluptates voluptatem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, praesentium saepe nam sint repellendus perspiciatis ipsam, necessitatibus obcaecati ipsum at, impedit sunt. Sit consequuntur, placeat quae accusamus voluptas voluptates voluptatem.</p>
     <div></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis deserunt veritatis similique vitae. Eius
-      laborum vel, voluptas? Qui repellat, placeat soluta, voluptas mollitia inventore similique molestiae est
-      repudiandae porro optio.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis deserunt veritatis similique vitae. Eius laborum vel, voluptas? Qui repellat, placeat soluta, voluptas mollitia inventore similique molestiae est repudiandae porro optio.</p>
   </main>
-
+  
   <section class="triangle"></section>
 </body>
-
 </html>

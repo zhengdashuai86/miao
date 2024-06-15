@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: FA;
+      src: url(./fontawesome-webfont.woff2);
+    }
+
+    div {
+      font-family: FA;
+    }
+
+    /*
+    &#xf051; 快进
+    &#xf052; 弹出
+    &#xf053; 上翻页
+    &#xf053; 下翻页
+    &#xf05e; 禁止
+    */
+
+    i.forbid {
+      font-family: FA;
+      font-style: normal;
+      color:aquamarine
+    }
+    i.forbid::before {
+      content: '\f05e'
+    }
+  </style>
+  <link rel="stylesheet" href="https://fontawesome.com/v4/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+  <div>我  <i class="fa fa-star"></i>   &#xf051;&#xf052;&#xf053;&#xf054;&#xf05e; --- </div>
+</body>
+</html>

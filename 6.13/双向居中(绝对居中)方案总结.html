@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/nozojudete/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style id="jsbin-css">
+* {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: inset 0 0 1px red;
+}
+
+section {
+  width: 200px;
+  height: 200px;
+}
+span {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+/* 子元素只能比父元素小,且子元素要定宽高 */
+section.a {
+  position: relative;
+  > span {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+  }
+}
+
+/* 子元素可以不定宽不定高,且子元素可以比父元素大*/
+section.b {
+  position: relative;
+  > span {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%; /* 基于包含块的宽度 */
+    top: 50%;
+    transform: translate(-50%, -50%); /*基于元素自己的尺寸*/
+  }
+}
+
+
+/* flex 子可以比父大.常规流 */
+section.c {
+  display: flex;
+  justify-content: center;
+  > span {
+    xwidth: 300px;
+    xheight: 300px;
+    flex-shrink: 0;
+    align-self: center; /* 这个方案子元素可以比父元素大 */
+    margin: ; /*auto这个子元素不能比父元素大 */
+  }
+}
+
+/* 同flex */
+section.d {
+  display: grid;
+  justify-content: center;
+  > span {
+    xwidth: 300px;
+    xheight: 300px;
+    flex-shrink: 0;
+    align-self: center; /* 这个方案子元素可以比父元素大 */
+    margin: ; /*auto这个子元素不能比父元素大 */
+  }
+}
+
+/* 水平居中比较麻烦,且子要比父小,常规流,意味着周围摆不了其它东西了*/
+section.e {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  > span {
+    width: auto;
+    height: auto;
+    xdisplay: block;
+    xmargin: auto;
+    display: inline-block;
+  }
+}
+
+
+/* 子元素必须比父元素小,行内布局实现 ,子元素不用定宽高*/
+section.f {
+  display: block;
+  height: 200px;
+  text-align: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0px;
+    background-color: red;
+    height: 100%;
+  }
+  
+  > span {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+/* 双向居中方案中至少要有一个元素的某一个维度是不定宽或高的 或者是宽高在一定范围内修改时依然能居中
+才能算是一个方案
+
+没有最好的方案,只有最合适的
+
+*/
+
+
+</style>
+</head>
+<body>
+  双向居中:
+  子元素在水平方向和垂直方向都居中于包含块
+  
+   <section class="a"><span>aa</span></section>
+   <section class="b"><span>bb</span></section>
+   <section class="c"><span>cc</span></section>
+   <section class="d"><span>dd</span></section>
+   <section class="e"><span>ee</span></section>
+   <section class="f"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ipsum?</span></section>
+
+  
+  <div class="a">
+    
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere obcaecati provident aspernatur. Harum, accusantium, facere. A quam, est reprehenderit quod sint cumque ipsa! Libero animi dolores ratione amet ullam facilis?
+  </div>
+</body>
+</html>

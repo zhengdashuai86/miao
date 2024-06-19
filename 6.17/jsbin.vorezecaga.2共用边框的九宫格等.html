@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/vorezecaga/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style id="jsbin-css">
+* {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: inset 0 0 1px red;
+}
+
+
+.blog {
+  width: 200px;
+  height: 100px;
+  display: table-cell;
+  vertical-align: bottom;
+  transition: 2s;
+}
+.blog:hover {
+  font-size: 200%;;
+}
+
+
+.blog2 {
+  width: 200px;
+  height: 100px;
+  display: grid;
+  align-items: end;  
+}
+
+
+div{
+  width: 200px;
+  height: 100px;
+  border-radius: 9999px;
+  transition: .5s;
+  border: 3px solid #cbc7ca;
+  box-shadow: inset 0 0 0 0px #cbc7ca;;
+}
+div:hover {
+  border: 3px solid #30f34d;
+  box-shadow: inset 0 0 0 50px #30f34d;;
+}
+
+ul {
+  margin: 20px;
+  padding: 0;
+  width: 170px;
+  list-style: none;
+  border: 2px solid yellow;
+  overflow: hidden;
+  padding-bottom: 5px;
+  >li {
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    float: left;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    position: relative;
+    &:hover {
+      border: 5px solid red;
+      z-index: 8;
+    }
+  }
+}
+
+table {
+  clear: both;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+tr,col {
+  border: 5px solid black;
+}
+td {
+  width: 50px;
+  height: 50px;
+}
+td:hover {
+  border: 5px solid red;
+}
+</style>
+</head>
+<body>
+  <span class="blog">订阅</span>
+  <span class="blog2">订阅flex</span>
+  <span class="blog3">订阅</span>
+  
+  <div></div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </table>
+</body>
+</html>

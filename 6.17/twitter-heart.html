@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .like {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 2px solid;
+      background-image: url(./twitter-heart.png);
+      transition: none;
+      cursor: pointer;  /* 设置鼠标在元素上时的样式 */
+      xpointer-events: none;  /* 这样设置将会让元素对鼠标来讲是不可点到的，点击会点穿元素点到它下方,可以利用这个来做水印效果 */
+    }
+    #heart:checked + .like {
+      background-position: -2800px 0;
+      transition: .6s steps(28);
+    }
+  </style>
+</head>
+<body>
+  <input hidden type="checkbox" id="heart">
+  <label for="heart" class="like"></label>
+</body>
+</html>

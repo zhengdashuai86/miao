@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    div span {
+      transition: 0s 2s;
+      color: black;
+    }
+
+    div span:first-child {
+      color: red;
+
+    }
+
+    div:hover span {
+      color: black;
+      transition: none;
+    }
+
+    div span:hover {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>手机</span>
+    <span>平板</span>
+    <span>电脑</span>
+  </div>
+</body>
+
+</html>

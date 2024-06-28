@@ -1,0 +1,186 @@
+<script type="ok" id="ch0105/01">
+  var n = Number(prompt('人数'))
+  var c = 0
+  var sum = 0
+  var age
+  while (c < n) {
+    var age = Number(prompt('年龄'))
+    sum = sum + age
+    c = c + 1
+  }
+  console.log((sum / n).toFixed(2))
+</script>
+
+<script type="ok" id="ch0105/02">
+  var total = 0
+  var count = 0
+  while (count < 12) {
+    var remain = +prompt('shuru' + (count + 1))
+    total = total + remain
+    count = count + 1
+  }
+  result = total / 12
+  console.log( '$' + result.toFixed(2))
+</script>
+
+<script type="ok" id="ch0105/03">
+  var n = Number(prompt('人数'))
+  var c = 0
+  var sum = 0
+  var age
+  while (c < n) {
+    var age = Number(prompt('年龄'))
+    sum = sum + age
+    c = c + 1
+  }
+  console.log((sum / n).toFixed(4))
+</script>
+
+<script type="ok" id="ch0105/04">
+  var n = Number(prompt('n个整数'))
+  var c = 0
+  var sum = 0
+  var age
+  while (c < n) {
+    var age = Number(prompt('值'))
+    sum = sum + age
+    c = c + 1
+  }
+  console.log(sum)
+  console.log((sum / n).toFixed(5))
+</script>
+
+<script type="ok" id="ch0105/05">
+  var n = +prompt('n个整数')
+  var max = 0
+  var c = 0
+  while (c < n) {
+    var input = Number(prompt('值'))
+    if (input > max ){
+      max = input
+    }
+    c = c + 1
+  }
+  console.log(max)
+</script>
+
+<script type="ok" id="ch0105/06">
+  var n = +prompt('n个整数')
+  var max = 0
+  var min = 1000
+  var c = 0
+  while (c < n) {
+    var input = Number(prompt('值'))
+    if (input > max ){
+      max = input
+    }
+    if (input < min) {
+      min = input
+    }
+    c = c + 1
+  }
+  console.log(max - min)
+</script>
+
+<script type="ok" id="ch0105/07">
+  var day = Number(prompt('day'))
+  var c = 0
+  var zg = 0
+  var zs = 0
+  var zt = 0
+  var z = 0
+  while (c < day) {
+    var g = +prompt('g')
+    var s = +prompt('s')
+    var t = +prompt('t')
+    zg = zg + g
+    zs = zs + s
+    zt = zt + t
+    z = zg + zs + zt
+    c = c + 1
+  }
+  console.log(zg , zs , zt , z)
+</script>
+
+<script type="ok" id="ch0105/08">
+  var n = Number(prompt('n'))
+  var c =0
+  var t = (n-2)*180
+  var rest = 0
+  var sum = 0
+  while (c < n - 1) {
+    c = c + 1
+    var input = +prompt('deg')
+    t = t -input
+  }
+  console.log(t)
+</script>
+
+<script type="ok" id="ch0105/09">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var c = n
+  var t = 0
+  while (c <= m ) {
+    if (c % 2 == 1) {
+      t = t + c
+    }
+    c = c + 1
+  }
+  console.log(t)
+</script>
+
+<script type="ok" id="ch0105/10">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var c = n
+  var t = 0
+  while (c <= m ) {
+    if (c % 17 == 0) {
+      t = t + c
+    }
+    c = c + 1
+  }
+  console.log(t)
+</script>
+
+<script type="ok" id="猜数字">
+  var secret = Math.trunc(Math.random()*10)
+  do {
+    var guess = +prompt('猜数字')
+    if (guess > secret) {
+      alert('big')
+    } else if (guess < secret){
+      alert('small')
+    } else {
+      alert('good')
+    }
+  } while (guess !== secret)
+</script>
+
+<script type="" id="ch0105/11">
+  var n = +prompt('n')
+  var a = 0
+  var b = 0
+  var c = 0
+  for (var i = 0 ; i < n ;i++) {
+    var num = +prompt('num')
+    if (num == 1) {
+      a++
+    } else if (num == 5) {
+      b++
+    } else if (num == 10) {
+      c++
+    }
+  }
+  console.log(a, b,c)
+</script>
+
+<script type="ok" id="ch0105/">
+  var n = Number(prompt('n'))
+
+  while () {
+
+  }
+  console.log()
+</script>

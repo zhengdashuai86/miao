@@ -1,0 +1,314 @@
+<!-- 第一题写法一 -->
+<script type="ok" id="ch0104/01">
+  var n=Number(prompt('n'))
+  if (n>0){
+    console.log('positive')
+  } else {
+    if (n==0){
+      consolel.log('zero')
+    }else{
+      console.log('negative')
+    }
+  }
+</script>
+<!-- 第一题写法二 -->
+<script type="ok" id="ch0104/0">
+  var n=Number(prompt('n'))
+  if (n>0){
+    console.log('positive')
+  } else if (n==0){
+    consolel.log('zero')
+  }else{
+    console.log('negative')
+  }
+</script>
+
+<script type="ok" id="ch0104/02">
+  var n=Number(prompt('n'))
+  if (n>=0){
+    console.log(n)
+  }else{
+    console.log(-n)
+  }
+</script>
+
+<script type="ok" id="ch0104/03">
+  var n=Number(prompt('n'))
+  if (n%2==0){
+    console.log('even')
+  }else{
+    console.log('odd')
+  }
+</script>
+
+<script type="ok" id="ch0104/04">
+  var n = prompt('n')
+  var n1= n.charCodeAt(0)
+  if (n1%2==1) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/05">
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  if (x>y) {
+    console.log('>')
+  } else if (n<y) {
+    console.log('<')
+  } else {
+    console.log('=')
+  }
+</script>
+
+<script type="ok" id="ch0104/06">
+  var n = Number(prompt('n'))
+  if (n>=10 && n<100) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script type="ok" id="ch0104/07">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  if (n>=10||m>=20) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script type="ok" id="ch0104/08">
+  var n = Number(prompt('n'))
+  if (n%3==0&&n%5==0) {
+    console.log('YES')
+  } else if (n) {
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/09">
+  var n = Number(prompt('n'))
+  if (n%3==0) {
+    console.log('3')
+  } if (n%5==0) {
+    console.log('5')
+  } if (n%7==0) {
+    console.log('7')
+  } if (n%3!==0&&n%5!==0&&n%7!==0) {
+    console.log('n')
+  }
+</script>
+
+<script type="ok" id="ch0104/091">
+  var n = Number(prompt('n'))
+  var jinqu=false
+  if (n%3==0) {
+    console.log('3')
+    jinqu=true
+  } if (n%5==0) {
+    console.log('5')
+    jinqu=true
+  } if (n%7==0) {
+    console.log('7')
+    jinqu=true
+  } if (!jinqu) {
+    console.log('n')
+  }
+</script>
+
+<script type="ok" id="ch0104/10">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  if (n>=60&&m<60||n<60&&m>=60) {
+    console.log('1')
+  } else {
+    console.log('0')
+  }
+</script>
+
+<script type="ok" id="ch0104/101">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  var result=0
+  if (n<60) {
+    var result=result+1
+  } 
+  if (m<60) {
+    var result=result+1
+  } 
+  if (x<60) {
+    var result=result+1
+  } 
+  if (y<60) {
+    var result=result+1
+  } 
+  if (result==2) {
+    console.log('2')
+  }
+</script>
+
+<script type="ok" id="ch0104/11">
+  var n = Number(prompt('n'))
+  if (n==2 || n ==4 ||n==6 || n==7 ) {
+    console.log('YES')
+  } else{
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/12">
+  var n = Number(prompt('n'))
+  var walk=n/1.2
+  var bike=n/3+50
+  if (walk<bike) {
+    console.log('Walk')
+  } else if (walk>bike) {
+    console.log('Bike')
+  } else {
+    console.log('All')
+  }
+</script>
+
+<script type="ok" id="ch0104/13">
+  var x = Number(prompt('x'))
+  var y
+  if (0 <= x&&x < 5) {
+    y=-x+2.5
+  } else if (5 <= x&&x < 10) {
+    y=2-1.5*(x-3)*(x-3)
+  } else {
+    y=x/2-1.5
+  }
+  console.log(y.toFixed(3))
+
+</script>
+
+<script type="ok" id="ch0104/14">
+  var n = Number(prompt('n'))
+  var jia = prompt('?')
+  var p = 8
+  if (n > 1000) {
+    p = p + Math.ceil((n - 1000) / 500) * 4
+  } 
+  if (jia = 'y') {
+    p = p + 5
+  }
+  console.log(p)
+</script>
+
+<script type="ok" id="ch0104/15">
+  var n = Number(prompt('n'))
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var max = n
+  if (n < a) {
+    max = a
+  }
+  if (n < b) {
+    max = b
+  }
+  console.log(max)
+</script>
+
+<script type="ok" id="ch0104/16">
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var c = Number(prompt('c'))
+  if (a + b > c) {
+    console.log('yes')
+  } else if (a + c > b) {
+    console.log('yes')
+  } else if (c + b >c) {
+    console.log('yes')
+  } else {
+    console.log ('no')
+  }
+</script>
+
+<script type="ok" id="ch0104/17">
+  var n = Number(prompt('n'))
+  if (n % 400 ==0 || n % 100 !== 0 && n % 3200 !== 0 && n % 4 == 0) {
+    console.log('Y')
+  } else  {
+    console.log('N')
+  }
+</script>
+
+<script type="ok" id="ch0104/18">
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  if (-1 <= x && x <=1 && -1 <= y && y <=1) {
+    console.log('yes')
+  } else {
+    console.log('no')
+  }
+</script>
+
+<script type="ok" id="ch0104/19">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var f = prompt('f')
+  if (f == '+') {
+    console.log(n + m)
+  } else if (f == '-') {
+    console.log(n - m)
+  } else if (f == '*') {
+    console.log(n * m)
+  } else if (f == '/'){
+    if (m == 0) {
+      console.log ('Divided by zero!')
+    } else {
+      console.log(n / m)
+    }
+  } else {
+    console.log('Invalid operator!')
+  }
+</script>
+
+<script type="" id="ch0104/20" 错误的>
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var c = Number(prompt('c'))
+  var d = b*b-4*a*c
+  if (d == 0) {
+    var x = -b / (2 * a)
+    console.log('x1=x2' + x.toFixed(5))
+  } else if (d > 0) {
+    var x1 = (-b + Math.sqrt(d)) / (2 * a)
+    var x2 = (-b + Math.sqrt(d)) / (2 * a)
+    console.log('x1=' + x1.toFixed(5) + ';x2=' + x2.toFixed(5))
+  } else {
+    var x1r= -b / (2 * a)
+    var x1i= Math.sqrt(-d) / (2*a)
+    if (x1i >= 0){
+      var x1=x1r.toFixed(5) + '+' + x1i.toFixed(5) + 'i'
+    } else {
+      var x1='' + x1r.toFixed(5) + x1i.toFixed(5) + 'i'
+    }
+
+    var x2r= -b / (2 * a)
+    var x2i= -Math.sqrt(-d) / (2*a)
+    if (x1i >= 0){
+      var x2=x2r.toFixed(5) + x2i.toFixed(5) + 'i'
+    } else {
+      var x2='' + x2r.toFixed(5) + x2i.toFixed(5) + 'i'
+    }
+    console.log('x1=' + x1 + ';x2=' + x2)
+  }
+</script>
+
+<script type="ok" id="ch0104/21">
+  var n = Number(prompt("n"))
+  var x = Number(prompt("x"))
+  var y = Number(prompt("y"))
+  var eatover=Math.ceil(y/x)
+
+  console.log(n-eatover)
+</script>

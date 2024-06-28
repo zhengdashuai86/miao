@@ -2,10 +2,11 @@
 https://class.damiaoedu.com:44313/statics/task/basic-coding-test.html#https://zhengdashuai86.github.io/miao/noi.html
 自己实际上交的地址
 https://class.damiaoedu.com:44313/statics/task/basic-coding-test.html#https://zhengdashuai86.github.io/miao/6.23/noi.html
-本地批改（不好用）
+本地批改（更好用）
 https://class.damiaoedu.com:44313/statics/task/basic-coding-test.html#http://127.0.0.1:8080/noi.html
 安装指令：npm i -g http-server
 启动指令：http-server    -o   --cors
+ctrl+f5刷新专用网站
 
 // Math.max()
 // Math.min()

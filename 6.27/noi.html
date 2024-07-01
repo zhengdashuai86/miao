@@ -1,44 +1,161 @@
-<script type="" id="ch0105/12">
-  var n = Number(prompt('n'))
-
-  while () {
-
+<script type="ok" id="ch0105/12">
+  var n = +prompt('n')
+  var target = +prompt('target')
+  var num = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var m = +prompt('m')
+    if (m == target) {
+      num = num + 1
+    }
   }
-  console.log()
+  console.log(num)
 </script>
 
-<script type="ok" id="ch0105/">
-  var n = Number(prompt('n'))
-
-  while () {
-
+<script type="ok" id="ch0105/13">
+  var n = +prompt('n')
+  var m = +prompt('m')
+  var result = 1
+  for (count = 0 ; count < m ; count ++) {
+    result = result * n
   }
-  console.log()
+  console.log(result)
 </script>
 
-<script type="ok" id="ch0105/">
-  var n = Number(prompt('n'))
-
-  while () {
-
+<script type="ok" id="ch0105/14">
+  var x = +prompt('x')
+  var n = +prompt('n')
+  for (var count = 0 ; count < n ; count ++) {
+    x = x * 1.001
   }
-  console.log()
+  console.log(x.toFixed(4))
 </script>
 
-<script type="ok" id="ch0105/">
-  var n = Number(prompt('n'))
-
-  while () {
-
+<script type="ok" id="ch0105/15">
+  var r = +prompt('r')
+  var m = +prompt('m')
+  var y = +prompt('y')
+  var r1 = r / 100 + 1
+  for (var count = 0 ; count < y ; count ++) {
+    m = r1 * m
   }
-  console.log()
+  console.log(Math.floor(m))
 </script>
 
-<script type="ok" id="ch0105/">
-  var n = Number(prompt('n'))
-
-  while () {
-
+<script type="ok" id="ch0105/16">
+  var s = +prompt('s')
+  var bilv = +prompt('bilv')
+  var zs = 0
+  var p = 200
+  var m = false
+  for (var count = 1 ; count < 20 ; count ++) {
+    zs = zs + s
+    if (zs >= p) {
+      m = true
+      console.log(count)
+      break
+    }
+    p = p * (1 + bilv / 100)
   }
-  console.log()
+  if (!m){
+    console.log('Impossible')
+  }
+</script>
+
+<script type="ok" id="ch0105/17">
+  var k = +prompt('k')
+  var a = 1
+  var b = 1
+  if (k < 3) {
+    console.log(1)
+  }else { 
+    for (var count = 0 ; count < k - 2 ; count ++) {
+    c = a + b
+    a = b
+    b = c
+  }
+  console.log(c)
+}
+</script>
+
+<script type="ok" id="ch0105/18">
+  var n = +prompt('n')
+  var s1 = +prompt('s1')
+  var s2 = +prompt('s2')
+  var s = s2 / s1
+  for (var count = 1 ; count < n ; count ++) {
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var ns = b / a
+    if (s - ns > 0.05) {
+      console.log('worse')
+    } else if (ns - s > 0.05) {
+      console.log('better')
+    } else {
+      console.log('same')
+    }
+  }
+</script>
+
+<script type="ok" id="ch0105/19">
+  var n = +prompt('n')
+  var time = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var c = +prompt('c')
+    time = time + (a**2 + b ** 2)**0.5 * 2 / 50 + c * 1.5
+  }
+  console.log(Math.ceil(time))
+</script>
+
+<script type="ok" id="ch0105/20">
+  var h = +prompt('h')
+  var zh = 0
+  var hh = h
+  for (var count = 0 ; count < 10 ; count ++) {
+    var zh = zh + hh * 2
+    var hh = hh / 2
+  }
+  zh = zh - h
+  console.log(zh.toFixed(4) , hh.toFixed(7))
+</script>
+
+<script type="ok" id="ch0105/21">
+  var n = +prompt('n')
+  while (n !== 1) {
+    if (n % 2 == 1) {
+      a = n
+      n = n * 3 + 1
+      console.log(a + '*3+1=' + n)
+    } else if (n % 2 == 0) {
+      a = n
+      n = n / 2
+      console.log(a + '/2=' + n)
+    }
+  }
+  console.log('End')
+</script>
+
+<script type="" id="ch0105/22">
+  var moh = 0
+  var saved = 0
+  var a = false
+  for (var count = 1 ; count <= 12 ; count ++) {
+    moh = moh + 300
+    var bud = +prompt('bud')
+    if (bud > moh) {
+      console.log(-count)
+      a = true
+      break
+    } 
+    moh = moh - bud
+    if (moh >= 100){
+      var lingqian = moh %100
+      saved =saved + (moh - lingqian)
+      moh = lingqian
+    }
+  }
+  if (!a){
+    console.log(moh + saved * 1.2)
+  }
 </script>

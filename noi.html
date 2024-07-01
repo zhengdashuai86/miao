@@ -1,3 +1,498 @@
+<script type="ok" id="ch0103/01">
+  var a = Number(prompt('请输入A'))
+  var b = Number(prompt('请输入B'))
+
+  var c = a + b
+
+  console.log(c)
+</script>
+
+一个题目写一个script标签
+id为题目的编号形如ch0103/02,注意最后没有一个斜杠
+
+<script type="ok" id="ch0103/02">
+  var a = Number(prompt('请输入A'))
+  var b = Number(prompt('请输入B'))
+  var c = Number(prompt('请输入C'))
+
+  var result = (a + b) * c
+
+  console.log(result)
+</script>
+
+<script type="ok" id="ch0103/03">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c = Number(prompt("c"))
+
+  var result = Math.floor((a + b) / c)
+  console.log(result)
+</script>
+
+<script type="ok" id="ch0103/04">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var reminder=a%b
+  var result=Math.trunc(a/b)
+  console.log( result,reminder)
+</script>
+
+<script type="ok" id="ch0103/05">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c=a/b
+  var result=c.toFixed(9)
+  console.log(result)
+</script>
+
+<script type="ok" id="ch0103/06">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c=(b/a)*100
+  var result=c.toFixed(3)
+  console.log(result+"%")
+</script>
+
+<script type="ok" id="ch0103/07">
+  var x = Number(prompt("x"))
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c = Number(prompt("c"))
+  var d = Number(prompt("d"))
+  var result=a*x**3 + b*x**2 + c*x + d
+  console.log(result.toFixed(7))
+</script>
+
+<script type="ok" id="ch0103/08">
+  var a = Number(prompt("a"))
+  var result=5*(a-32)/9
+  console.log(result.toFixed(5))
+</script>
+
+<script type="ok" id="ch0103/09">
+  var a = Number(prompt("a"))
+  var zhijin=2*a
+  var zhouchang=2*3.14159*a
+  var mianji=3.14159*a**2
+  console.log(zhijin.toFixed(4),zhouchang.toFixed(4),mianji.toFixed(4))
+</script>
+
+<script type="ok" id="ch0103/10">
+  var r1 = Number(prompt("r1"))
+  var r2 = Number(prompt("r2"))
+  R = 1/(1/r1 + 1/r2)
+  
+  console.log(R.toFixed(2))
+</script>
+
+<script type="ok" id="ch0103/11">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c=a%b
+
+  console.log(c.toFixed(4))
+</script>
+
+<script type="ok" id="ch0103/12">
+  var r = Number(prompt("r"))
+  var V=4/3*3.14*r**3
+  
+  console.log(V.toFixed(2))
+</script>
+
+<script type="ok" id="ch0103/13">
+  var a = Number(prompt("a"))
+  var ge=a%10
+  var shi=(a-ge)/10%10
+  var bai=(a-ge-shi*10)/100%10
+  
+  console.log(""+ge+shi+bai)
+</script>
+
+<script type="ok" id="ch0103/14">
+  var h = Number(prompt("h"))
+  var r = Number(prompt("r"))
+  var  result=3.14159* r * r * h
+  var result1=20000/result
+  console.log(Math.ceil(result1))
+</script>
+
+<script type="ok" id="ch0103/15">
+  var n = Number(prompt("n"))
+  var x = Number(prompt("x"))
+  var y = Number(prompt("y"))
+  var eatover=Math.ceil(y/x)
+
+  console.log(n-eatover)
+</script>
+
+<script type="ok" id="ch0103/16">
+  var xa = Number(prompt("xa"))
+  var ya = Number(prompt("ya"))
+  var xb = Number(prompt("xb"))
+  var yb = Number(prompt("yb"))
+
+  var distance=Math.sqrt((xa-xb)**2+(ya-yb)**2)
+  
+  console.log(distance.toFixed(3))
+</script>
+
+<script type="ok" id="ch0103/17">
+  var x1 = Number(prompt("x1"))
+  var y1 = Number(prompt("y1"))
+  var x2 = Number(prompt("x2"))
+  var y2 = Number(prompt("y2"))
+  var x3 = Number(prompt("x3"))
+  var y3 = Number(prompt("y3"))
+  var a=Math.sqrt((x1-x2)**2+(y1-y2)**2)
+  var b=Math.sqrt((x3-x2)**2+(y3-y2)**2)
+  var c=Math.sqrt((x1-x3)**2+(y1-y3)**2)
+  var p=(a+b+c)/2
+  var s=Math.sqrt(p*(p-a)*(p-b)*(p-c))
+  console.log(s.toFixed(2))
+</script>
+
+<script type="ok" id="ch0103/18">
+  var a1 = Number(prompt("a1"))
+  var a2 = Number(prompt("a2"))
+  var n = Number(prompt("n"))
+
+  var cha=a2-a1
+  var v=(n-1)*cha+a1
+  
+  console.log(v)
+</script>
+
+<script type="ok" id="ch0103/19">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  
+  console.log(a*b)
+</script>
+
+<script type="ok" id="ch0103/20">
+  var n = Number(prompt("n"))
+
+  var result=2**n
+  
+  console.log(result)
+</script>
+
+<!-- 第一题写法一 -->
+<script type="ok" id="ch0104/01">
+  var n=Number(prompt('n'))
+  if (n>0){
+    console.log('positive')
+  } else {
+    if (n==0){
+      consolel.log('zero')
+    }else{
+      console.log('negative')
+    }
+  }
+</script>
+<!-- 第一题写法二 -->
+<script type="ok" id="ch0104/0">
+  var n=Number(prompt('n'))
+  if (n>0){
+    console.log('positive')
+  } else if (n==0){
+    consolel.log('zero')
+  }else{
+    console.log('negative')
+  }
+</script>
+
+<script type="ok" id="ch0104/02">
+  var n=Number(prompt('n'))
+  if (n>=0){
+    console.log(n)
+  }else{
+    console.log(-n)
+  }
+</script>
+
+<script type="ok" id="ch0104/03">
+  var n=Number(prompt('n'))
+  if (n%2==0){
+    console.log('even')
+  }else{
+    console.log('odd')
+  }
+</script>
+
+<script type="ok" id="ch0104/04">
+  var n = prompt('n')
+  var n1= n.charCodeAt(0)
+  if (n1%2==1) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/05">
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  if (x>y) {
+    console.log('>')
+  } else if (n<y) {
+    console.log('<')
+  } else {
+    console.log('=')
+  }
+</script>
+
+<script type="ok" id="ch0104/06">
+  var n = Number(prompt('n'))
+  if (n>=10 && n<100) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script type="ok" id="ch0104/07">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  if (n>=10||m>=20) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script type="ok" id="ch0104/08">
+  var n = Number(prompt('n'))
+  if (n%3==0&&n%5==0) {
+    console.log('YES')
+  } else if (n) {
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/09">
+  var n = Number(prompt('n'))
+  if (n%3==0) {
+    console.log('3')
+  } if (n%5==0) {
+    console.log('5')
+  } if (n%7==0) {
+    console.log('7')
+  } if (n%3!==0&&n%5!==0&&n%7!==0) {
+    console.log('n')
+  }
+</script>
+
+<script type="ok" id="ch0104/091">
+  var n = Number(prompt('n'))
+  var jinqu=false
+  if (n%3==0) {
+    console.log('3')
+    jinqu=true
+  } if (n%5==0) {
+    console.log('5')
+    jinqu=true
+  } if (n%7==0) {
+    console.log('7')
+    jinqu=true
+  } if (!jinqu) {
+    console.log('n')
+  }
+</script>
+
+<script type="ok" id="ch0104/10">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  if (n>=60&&m<60||n<60&&m>=60) {
+    console.log('1')
+  } else {
+    console.log('0')
+  }
+</script>
+
+<script type="ok" id="ch0104/101">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  var result=0
+  if (n<60) {
+    var result=result+1
+  } 
+  if (m<60) {
+    var result=result+1
+  } 
+  if (x<60) {
+    var result=result+1
+  } 
+  if (y<60) {
+    var result=result+1
+  } 
+  if (result==2) {
+    console.log('2')
+  }
+</script>
+
+<script type="ok" id="ch0104/11">
+  var n = Number(prompt('n'))
+  if (n==2 || n ==4 ||n==6 || n==7 ) {
+    console.log('YES')
+  } else{
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0104/12">
+  var n = Number(prompt('n'))
+  var walk=n/1.2
+  var bike=n/3+50
+  if (walk<bike) {
+    console.log('Walk')
+  } else if (walk>bike) {
+    console.log('Bike')
+  } else {
+    console.log('All')
+  }
+</script>
+
+<script type="ok" id="ch0104/13">
+  var x = Number(prompt('x'))
+  var y
+  if (0 <= x&&x < 5) {
+    y=-x+2.5
+  } else if (5 <= x&&x < 10) {
+    y=2-1.5*(x-3)*(x-3)
+  } else {
+    y=x/2-1.5
+  }
+  console.log(y.toFixed(3))
+
+</script>
+
+<script type="ok" id="ch0104/14">
+  var n = Number(prompt('n'))
+  var jia = prompt('?')
+  var p = 8
+  if (n > 1000) {
+    p = p + Math.ceil((n - 1000) / 500) * 4
+  } 
+  if (jia = 'y') {
+    p = p + 5
+  }
+  console.log(p)
+</script>
+
+<script type="ok" id="ch0104/15">
+  var n = Number(prompt('n'))
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var max = n
+  if (n < a) {
+    max = a
+  }
+  if (n < b) {
+    max = b
+  }
+  console.log(max)
+</script>
+
+<script type="ok" id="ch0104/16">
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var c = Number(prompt('c'))
+  if (a + b > c) {
+    console.log('yes')
+  } else if (a + c > b) {
+    console.log('yes')
+  } else if (c + b >c) {
+    console.log('yes')
+  } else {
+    console.log ('no')
+  }
+</script>
+
+<script type="ok" id="ch0104/17">
+  var n = Number(prompt('n'))
+  if (n % 400 ==0 || n % 100 !== 0 && n % 3200 !== 0 && n % 4 == 0) {
+    console.log('Y')
+  } else  {
+    console.log('N')
+  }
+</script>
+
+<script type="ok" id="ch0104/18">
+  var x = Number(prompt('x'))
+  var y = Number(prompt('y'))
+  if (-1 <= x && x <=1 && -1 <= y && y <=1) {
+    console.log('yes')
+  } else {
+    console.log('no')
+  }
+</script>
+
+<script type="ok" id="ch0104/19">
+  var n = Number(prompt('n'))
+  var m = Number(prompt('m'))
+  var f = prompt('f')
+  if (f == '+') {
+    console.log(n + m)
+  } else if (f == '-') {
+    console.log(n - m)
+  } else if (f == '*') {
+    console.log(n * m)
+  } else if (f == '/'){
+    if (m == 0) {
+      console.log ('Divided by zero!')
+    } else {
+      console.log(n / m)
+    }
+  } else {
+    console.log('Invalid operator!')
+  }
+</script>
+
+<script type="ok" id="ch0104/20" 错误的>
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var c = Number(prompt('c'))
+  var d = b*b-4*a*c
+  if (d == 0) {
+    var x = -b / (2 * a)
+    console.log('x1=x2' + x.toFixed(5))
+  } else if (d > 0) {
+    var x1 = (-b + Math.sqrt(d)) / (2 * a)
+    var x2 = (-b + Math.sqrt(d)) / (2 * a)
+    console.log('x1=' + x1.toFixed(5) + ';x2=' + x2.toFixed(5))
+  } else {
+    var x1r= -b / (2 * a)
+    var x1i= Math.sqrt(-d) / (2*a)
+    if (x1i >= 0){
+      var x1=x1r.toFixed(5) + '+' + x1i.toFixed(5) + 'i'
+    } else {
+      var x1='' + x1r.toFixed(5) + x1i.toFixed(5) + 'i'
+    }
+
+    var x2r= -b / (2 * a)
+    var x2i= -Math.sqrt(-d) / (2*a)
+    if (x1i >= 0){
+      var x2=x2r.toFixed(5) + x2i.toFixed(5) + 'i'
+    } else {
+      var x2='' + x2r.toFixed(5) + x2i.toFixed(5) + 'i'
+    }
+    console.log('x1=' + x1 + ';x2=' + x2)
+  }
+</script>
+
+<script type="ok" id="ch0104/21">
+  var n = Number(prompt("n"))
+  var x = Number(prompt("x"))
+  var y = Number(prompt("y"))
+  var eatover=Math.ceil(y/x)
+
+  console.log(n-eatover)
+</script>
+
 <script type="ok" id="ch0105/01">
   var n = Number(prompt('人数'))
   var c = 0
@@ -158,7 +653,7 @@
   } while (guess !== secret)
 </script>
 
-<script type="" id="ch0105/11">
+<script type="ok" id="ch0105/11">
   var n = +prompt('n')
   var a = 0
   var b = 0
@@ -183,4 +678,553 @@
 
   }
   console.log()
+</script>
+
+<script type="ok" id="ch0105/12">
+  var n = +prompt('n')
+  var target = +prompt('target')
+  var num = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var m = +prompt('m')
+    if (m == target) {
+      num = num + 1
+    }
+  }
+  console.log(num)
+</script>
+
+<script type="ok" id="ch0105/13">
+  var n = +prompt('n')
+  var m = +prompt('m')
+  var result = 1
+  for (count = 0 ; count < m ; count ++) {
+    result = result * n
+  }
+  console.log(result)
+</script>
+
+<script type="ok" id="ch0105/14">
+  var x = +prompt('x')
+  var n = +prompt('n')
+  for (var count = 0 ; count < n ; count ++) {
+    x = x * 1.001
+  }
+  console.log(x.toFixed(4))
+</script>
+
+<script type="ok" id="ch0105/15">
+  var r = +prompt('r')
+  var m = +prompt('m')
+  var y = +prompt('y')
+  var r1 = r / 100 + 1
+  for (var count = 0 ; count < y ; count ++) {
+    m = r1 * m
+  }
+  console.log(Math.floor(m))
+</script>
+
+<script type="ok" id="ch0105/16">
+  var s = +prompt('s')
+  var bilv = +prompt('bilv')
+  var zs = 0
+  var p = 200
+  var m = false
+  for (var count = 1 ; count < 20 ; count ++) {
+    zs = zs + s
+    if (zs >= p) {
+      m = true
+      console.log(count)
+      break
+    }
+    p = p * (1 + bilv / 100)
+  }
+  if (!m){
+    console.log('Impossible')
+  }
+</script>
+
+<script type="ok" id="ch0105/17">
+  var k = +prompt('k')
+  var a = 1
+  var b = 1
+  if (k < 3) {
+    console.log(1)
+  }else { 
+    for (var count = 0 ; count < k - 2 ; count ++) {
+    c = a + b
+    a = b
+    b = c
+  }
+  console.log(c)
+}
+</script>
+
+<script type="ok" id="ch0105/18">
+  var n = +prompt('n')
+  var s1 = +prompt('s1')
+  var s2 = +prompt('s2')
+  var s = s2 / s1
+  for (var count = 1 ; count < n ; count ++) {
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var ns = b / a
+    if (s - ns > 0.05) {
+      console.log('worse')
+    } else if (ns - s > 0.05) {
+      console.log('better')
+    } else {
+      console.log('same')
+    }
+  }
+</script>
+
+<script type="ok" id="ch0105/19">
+  var n = +prompt('n')
+  var time = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var c = +prompt('c')
+    time = time + (a**2 + b ** 2)**0.5 * 2 / 50 + c * 1.5
+  }
+  console.log(Math.ceil(time))
+</script>
+
+<script type="ok" id="ch0105/20">
+  var h = +prompt('h')
+  var zh = 0
+  var hh = h
+  for (var count = 0 ; count < 10 ; count ++) {
+    var zh = zh + hh * 2
+    var hh = hh / 2
+  }
+  zh = zh - h
+  console.log(zh.toFixed(4) , hh.toFixed(7))
+</script>
+
+<script type="ok" id="ch0105/21">
+  var n = +prompt('n')
+  while (n !== 1) {
+    if (n % 2 == 1) {
+      a = n
+      n = n * 3 + 1
+      console.log(a + '*3+1=' + n)
+    } else if (n % 2 == 0) {
+      a = n
+      n = n / 2
+      console.log(a + '/2=' + n)
+    }
+  }
+  console.log('End')
+</script>
+
+<script type="ok" id="ch0105/22">
+  var moh = 0
+  var saved = 0
+  var a = false
+  for (var count = 1 ; count <= 12 ; count ++) {
+    moh = moh + 300
+    var bud = +prompt('bud')
+    if (bud > moh) {
+      console.log(-count)
+      a = true
+      break
+    } 
+    moh = moh - bud
+    if (moh >= 100){
+      var lingqian = moh %100
+      saved =saved + (moh - lingqian)
+      moh = lingqian
+    }
+  }
+  if (!a){
+    console.log(moh + saved * 1.2)
+  }
+</script>
+
+<script type="ok" id="ch0105/23">
+  var stock = +prompt('stock')
+  var people = +prompt('people')
+  var c = 0
+  for (var count = 0 ; count < people ; count ++) {
+    var need = +prompt('need')
+    if (need <= stock) {
+      stock -= need
+    } else {
+      c++
+    }
+  }
+  console.log(c)
+</script>
+
+<script type="ok" id="ch0105/24">
+  var n = +prompt('n')
+  var c = 0
+  var max = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var a = +prompt('a')
+    var b = +prompt('b')
+    if (a>=90 && a<=140 && b>=60 && b<=90) {
+      c++
+      if (max < c) {
+        max = c
+      }
+    } else {
+      c = 0
+    }
+  }
+  console.log(max)
+</script>
+
+<script type="ok" id="ch0105/25">
+  for (var i = 1 ; i < 999 ; i ++) {
+    var a7 = i % 7
+    var b7 = (i-a7) / 7 % 7
+    var c7 = (i-a7 - b7 * 7) / 7 / 7 % 7
+    var a9 = i % 9
+    var b9 = (i-a9) / 9 % 9
+    var c9 = (i-a9 - b9 * 9) / 9 / 9 % 9
+    if (a7 == c9 && b7 == b9 && a9 == c7){
+      console.log(i)
+      console.log('' + c7 + b7 + a7)
+      console.log('' + c9 + b9 + a9)
+    }
+  }
+</script>
+
+<script type="ok" id="ch0105/26">
+  var n = +prompt('n')
+  var i = 0
+  for (var count = 0 ; count < n ; count ++) {
+    var num = +prompt('num')
+    var a = num % 10
+    var b = (num - a) /10 %10
+    var c = (num -a - b*10) / 100 %10
+    var d = (num - a - b*10 -c* 100) / 1000 %10
+    if (a - b - c - d > 0){
+      i++
+    }
+  }
+  console.log(i)
+</script>
+
+<script type="ok" id="ch0105/27">
+  var k = +prompt('k')
+  var sum = 0
+  for (var count = 1 ; ; count ++) {
+    sum += 1 / count
+    if (sum > k) {
+      break
+    }
+  }
+  console.log(count)
+</script>
+
+<script type="ok" id="ch0105/28">
+  var n = +prompt('n')
+  while (n > 0) {
+    var d = n % 10
+    console.log(d)
+    n = (n - d) / 10
+  }
+  console.log()
+</script>
+
+<script type="ok" id="ch0105/29">
+  var n = +prompt('n')
+  var res = 0
+  var s = 1
+  if (n < 0) {
+    var s = -1
+    n = -n
+  }
+  while (n > 0) {
+    var data = n % 10 
+    n = (n - data) / 10 
+    res = res*10 + data
+  }
+  console.log(res * s)
+</script>
+
+<script type="ok" id="ch0105/30">
+  var n = +prompt('n')
+  var k = +prompt('k')
+  var c = 0
+  while (n > 0) {
+    var data = n % 10
+    if (data == k) {
+      c++
+    }
+    n = (n - data) / 10
+  }
+  if (c == k) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script type="ok" id="ch0105/32">
+  var n = +prompt('n')
+  var a = 1
+  var b = 1
+  var sum = 0
+  for (var count = 0 ; count < n ; count ++) {
+    b += a
+    a = b - a 
+    sum += b / a
+  }
+  console.log(sum.toFixed(4))
+</script>
+
+<script type="ok" id="ch0105/33">
+  var n = +prompt('n')
+  var sum = 0
+  var sign = 1
+  for (var count = 1 ; count <= n ; count ++) {
+    sum += 1 / count * sign* (-1)**(count+1)
+  }
+  console.log(sum.toFixed(4))
+</script>
+
+<script type="ok" id="ch0105/34">
+  var n = +prompt('n')
+  var sum = 0
+  var fa = 1
+  for (var count = 1 ; count <= n ; count ++) {
+    fa *= count
+    sum += fa
+  }
+  console.log(sum)
+</script>
+
+<script type="ok" id="ch0105/35">
+  var n = +prompt('n')
+  var sum = 1
+  var fa = 1
+  for (var count = 1 ; count <= n ; count ++) {
+    fa *= count
+    sum += 1/fa
+  }
+  console.log(sum.toFixed(10))
+</script>
+
+<script type="ok" id="ch0105/36">
+  var x = +prompt('x')
+  var n = +prompt('n')
+  var sum = 0
+  for (var count = 0 ; count <= n ; count ++) {
+    var y = x**count
+    sum += y
+  }
+  console.log(sum.toFixed(2))
+</script>
+
+<script type="ok" id="ch0105/38">
+  var n = +prompt()
+  for (var i = 0; i < n; i++) {
+    var exp = +prompt()
+    var e = exp
+    if (exp == 0) {
+      prompt()
+      console.log(0)
+    } else {
+      for (var j = 0; j <= e; j++) {
+        var c = +prompt()
+        if (j !== e) {
+          console.log(c * exp)
+        }
+        exp--
+      }
+    }
+  }
+</script>
+
+<script type="" id="ch0105/31">
+  var n = +prompt('')
+  var m = +prompt('')
+  for (var i =1 ; i <= n ; i ++) {
+    var on = true
+    for (var j=1;j<=m;j++){
+      if (i % j == 0){
+        on = !on
+      }
+    }
+    if (on == false){
+      console.log(i)
+    }
+  }
+</script>
+
+<script type="ok" id="ch0105/39">
+  var n = +prompt('')
+  var sum = 0
+  for (var i = 1 ; i < n ; i ++) {
+    var youguan = false
+    var x = i
+    if (i % 7 == 0){
+      youguan = true
+    } while (x> 0){
+      var ge = i % 10
+      if (ge == 7) {
+        youguan = true
+        break
+      } 
+      x = (x - ge) / 10 
+    }
+    if (!youguan) {
+      sum += i * i
+    }
+  }
+  console.log(sum)
+</script>
+
+<script type="ok" id="ch0105/40">
+  var n = +prompt('')
+  var count = 0
+  for (var i = 1 ; i <= n ; i ++) {
+    x = i
+    while (x > 0) {
+      var 个位 = x%10
+      if (个位==1){
+        count++
+      }
+      x = (x - 个位) / 10
+    }
+  }
+  console.log(count)
+</script>
+
+<script type="ok" id="ch0105/41">
+  var l = +prompt('')
+  var r = +prompt('')
+  var count = 0
+  for (var i = l ; i <= r ; i ++) {
+    x = i
+    while (x > 0) {
+      var 个位 = x%10
+      if (个位==2){
+        count++
+      }
+      x = (x - 个位) / 10
+    }
+  }
+  console.log(count)
+</script>
+
+<script type="ok" id="ch0105/43">
+  var n = +prompt('')
+  for (var i = 2 ; i < n ; i ++) {
+    if (n % i == 0) {
+      var answer = n / i
+      console.log(answer)
+      break
+    }
+  }
+</script>
+
+<script type="ok" id="ch0105/44">
+  var n = +prompt('')
+  var count=0
+  for (var i = 2 ;  ; i ++) {
+    var 素数 = true
+    for (var y = 2 ;y<=i/2;y++){
+      if (i%y==0){
+        素数 = false
+        break
+      }
+    }
+    if (素数){
+      count++
+      if (count===n){
+        console.log(i)
+        break
+      }
+    }
+  }
+
+  console.log()
+</script>
+
+<script type="ok" id="ch0105/45">
+  var n = +prompt('')
+  var tian = 0
+  var qian = 1
+  var z = 0
+  for (var i = 1 ; i <= n ; i ++) {
+    z += qian
+    tian++
+    if (tian == qian) {
+      qian++
+      tian = 0
+    }
+  }
+  console.log(z)
+</script>
+
+<script type="ok" id="ch0105/42">
+  var h = +prompt('')
+  var w = +prompt('')
+  var char = +prompt('')
+  var fill = +prompt('')
+  var res = ''
+  for (var i = 0 ; i < h ; i ++) {
+    for (var j = 0 ; j < w ; j++) {
+      if (fill == 1 || i == 0 || j == 0 || i == h-1 || j ==w - 1){
+        res += char
+      } else {
+        res += ''
+      }
+    }
+    res += '\n'
+  }
+  console.log(res)
+</script>
+
+<script type="ok" id="ch0105/">
+  var n = +prompt('')
+  var line = ''
+  var res = ''
+  for (var i = 0 ; i < n ; i ++) {
+    line += '#'
+    res += line + '\n'
+  }
+  console.log(res)
+</script>
+
+<script type="ok">
+  var 素数 = function(n) {
+    for (var i = 2 ; i <= n/2 ; i++) {
+      if (n%i==0) {
+        return false
+      }
+    }
+    return true
+  }
+</script>
+
+<script type="ok">
+  var isabout7 = function(n){
+    if (n%7==0){
+      return true 
+    } else {
+      while (n > 0) {
+        var ge = n % 10
+        if (ge === 7) {
+          return true
+        }
+        n = (n - ge) / 10
+      }
+    }
+    return false
+  }
+
+  var n = +prompt()
+  var sum = 0
+  for (var i = 0 ; i < n ; i++) {
+    if (!isabout7(i)) {
+      sum += i*i
+    }
+  }
+  console.log(sum)
 </script>

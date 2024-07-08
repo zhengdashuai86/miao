@@ -1,0 +1,14 @@
+https://leetcode.com/problems/count-primes/
+https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
+https://leetcode.com/problems/move-zeroes/
+https://leetcode.com/problems/search-insert-position/
+https://leetcode.com/problems/find-all-duplicates-in-an-array/
+https://leetcode.com/problems/climbing-stairs/description/
+https://leetcode.com/problems/add-strings/
+https://leetcode.com/problems/distribute-candies/
+https://leetcode.com/problems/merge-sorted-array/
+https://leetcode.com/problems/powx-n/
+https://leetcode.com/problems/excel-sheet-column-title/
+https://leetcode.com/problems/sqrtx/
+https://leetcode.com/problems/single-element-in-a-sorted-array/
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/

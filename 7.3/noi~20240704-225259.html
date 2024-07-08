@@ -1,0 +1,147 @@
+数组：array
+数组是值的有序集合
+数组是一种类型的值
+创建数组：
+var a = [] // 创建空数组
+var a = [1,2,3,4,5,6,] // 创建非空数组
+
+a.length // 获取数组的长度，即数组里面元素的个数
+
+a.push(3) // 往数组末尾增加元素,这个函数返回数组新的长度
+a.pop() // 从数组末尾删除并返回那个被删除的元素，,当末尾没有元素时，返回undefined
+
+a.unshift(5) // 往数组的前面增加元素，并返回增加后数组新的长度
+a.shift() // 从数组的开头删除并返回那个被删除的元素，没有元素时返回undefined
+
+a[index] // 读取/获取数组中第index项的值,数组中的值是从0开始编号的
+a[表达式] 表达式只要计算出一个整数，就可以获取到数组中那位位置/下标的值了
+a[i + 1] a[i * 2] a[ b[5] ]
+a[i] = 表达式 // 设置数组第i项的值
+a.at(0) 只能获取，不能赋值；基本等价于 a[0]，但是at可以用at(-1)取到倒数第一个元素，at(-2)读到倒数第二个元素，依次类推
+// 数组中的元素是从0开始编号的，即第一个元素它的索引/下标/编号为0
+
+[1,2,3,4].concat([5,6,7,8]) // 连接两个数组，返回一个新的数组，不修旧数组
+
+<script id="ch0106/01">
+
+
+
+  var n = +prompt()
+  var nums = []
+
+  for (var i = 0; i < n; i++) {
+    var num = +prompt()
+    nums.push(num)
+  }
+
+  var target = +prompt()
+  var count = 0
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] == target) {
+      count++
+    }
+  }
+
+  console.log(count)
+</script>
+
+<script id="ch0106/03">
+  var prices = [28.9, 32.7, 45.6, 78, 35, 86.2, 27.8, 43, 56, 65]
+  var sum = 0
+  for (var i = 0; i < 10; i++) {
+    var amount = +prompt()
+    sum += amount * prices[i]
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0106/04">
+  var n = +prompt()
+  var nums = []
+  for (var i = 0; i < n; i++) {
+    var num = +prompt()
+    nums.push(num)
+  }
+
+  for (var i = nums.length - 1; i >= 0; i--) {
+    console.log(nums[i])
+  }
+</script>
+
+https://leetcode.cn/u/hungry-i2hodesijw
+
+
+<script id="书本递归示例代码">
+  function findSolution(target) {
+
+    function find(start = 1, how = '1') {
+      if (start > target) {
+        return
+      } else if (start === target) {
+        console.log(how)
+        return
+      }
+      find(start + 5, how + ' + 5')
+      find(start * 3, '(' + how + ') * 3')
+    }
+    find()
+  }
+</script>
+
+
+<script id="ch0106/01">
+  var n = +prompt()
+  var nums = []
+
+  for (var i = 0; i < n; i++) {
+    var num = +prompt()
+    nums.push(num)
+  }
+
+  var target = +prompt()
+  var count = 0
+
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] == target) {
+      count++
+    }
+  }
+  console.log(count)
+</script>
+
+<script id="106/03">
+  var prices = [
+    28.9,
+    32.7,
+    45.6,
+    78,
+    35,
+    86.2,
+    27.8,
+    43,
+    56,
+    65,
+  ]
+
+  var totalPrice = 0
+
+  for (var i = 0; i < 10; i++) {
+    var amount = +prompt()
+    totalPrice += amount * prices[i]
+  }
+
+  console.log(totalPrice)
+</script>
+<script id="106/04">
+  var n = +prompt()
+  var nums = []
+
+  for (var i = 0; i < n; i++) {
+    var num = +prompt()
+    nums.push(num)
+  }
+
+  for (var i = nums.length - 1; i >= 0; i--) {
+    console.log(nums[i])
+  }
+</script>

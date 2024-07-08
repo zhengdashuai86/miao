@@ -1,0 +1,17 @@
+https://leetcode.cn/problems/happy-number/description/
+https://leetcode.cn/problems/power-of-two/description/
+https://leetcode.cn/problems/base-7/description/
+https://leetcode.cn/problems/two-sum/description/
+https://leetcode.cn/problems/perfect-number/description/
+https://leetcode.cn/problems/max-consecutive-ones/description/
+https://leetcode.cn/problems/fizz-buzz/description/
+https://leetcode.cn/problems/power-of-three/description/
+https://leetcode.cn/problems/ugly-number/description/
+https://leetcode.cn/problems/add-digits/description/
+https://leetcode.cn/problems/single-number/description/
+https://leetcode.cn/problems/counting-bits/description/
+https://leetcode.cn/problems/palindrome-number/description/
+https://leetcode.cn/problems/valid-perfect-square/description/
+https://leetcode.cn/problems/plus-one/description/
+https://leetcode.cn/problems/missing-number/description/
+https://leetcode.cn/problems/self-dividing-numbers/description/

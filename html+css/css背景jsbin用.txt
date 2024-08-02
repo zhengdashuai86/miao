@@ -13,3 +13,13 @@
 
 启用tailwindcss
 <script src="https://cdn.tailwindcss.com"></script>
+
+翻译：
+justify-content：沿主轴对齐子项
+align-items：沿交叉轴对齐子项
+flex-direction：定义主轴的方向
+order：定义子项的排列顺序
+align-self：允许单个子项在交叉轴上有不同的对齐方式
+flex-wrap：定义子项是否换行
+flex-flow：简写属性，用于同时定义 flex-direction 和 flex-wrap
+align-content：沿交叉轴对齐多行内容

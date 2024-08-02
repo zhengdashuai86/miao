@@ -1,0 +1,74 @@
+<script src="./ancestry.js"></script>
+<script>
+  var ancestry = JSON.parse(ANCESTRY_FILE)
+
+  function filter(array, test) {
+    var result = []
+    for (var i = 0; i<array.length;i ++){  
+      if (  test(array[i], i, array)  ) {
+        result.push(array[i])
+      }
+    }
+    console.log(result)
+  }
+
+  function map(array, transform) {
+    // 将数组中的每个值通过transform转换为另一个值并放入新的数组返回
+    var result = []
+    for (var i = 0 ; i < array.length; i++) {
+      result.push(   transform(array[i], i, array)   )
+    }
+    return result 
+  }
+
+
+  // var result = 0
+  // for (var i = 0; i < array.length; i++) {
+  //   result = result + array[i]
+  // }
+  // console.log(result)
+
+  
+
+  // var result = 1
+  // for (var i = 0; i < array.length; i++) {
+  //   result = result * array[i]
+  // }
+  // console.log(result)
+
+
+  
+
+  // var result = -Infinity
+  // for (var i = 0; i < array.length; i++) {
+  //   result = Math.max(result, array[i])
+  // }
+  // console.log(result)
+
+
+  
+  function reduce(array, computation, initial) {
+    var result = initial
+    for (var i = 0; i < array.length; i++) {
+      result = computation(result, array[i], i, array)
+    }
+    return result
+  }
+  function reduce(array, computation, initial) {
+    var start = 0
+
+    if (initial === undefined) {
+      initial = array[0]
+      start = 1
+    }
+
+    // var result = initial
+    for (var i = start; i < array.length; i++) {
+      initial = computation(initial, array[i], i, array)
+    }
+
+    return initial
+  }
+
+
+</script>

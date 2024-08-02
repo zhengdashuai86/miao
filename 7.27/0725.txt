@@ -1,0 +1,104 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+var removeNthFromEnd = function(head, n) {
+    if (!head) {
+        return head
+    }
+    var d = 0
+    var deleted = false
+    
+    traverse(head)
+    
+    if (deleted) {
+        return head
+    } else {
+        return head.next
+    }
+    
+    
+    
+    function traverse(head) {
+        if (head) {
+            traverse(head.next)
+            d++
+            if (d == n + 1) {
+                deleted = true
+                head.next = head.next.next
+            }
+        }
+    }
+    
+};
+
+
+
+
+
+
+
+
+var deleteDuplicates = function(head) {
+    if (!head) {
+        return head
+    }
+    var p = head
+    while(p.next) {
+        if (p.val == p.next.val) {
+            p.next = p.next.next
+        } else {
+            p = p.next
+        }
+    }
+    return head
+};
+
+function deleteDuplicates(head) {
+    if (!head || !head.next) {
+        return head
+    }
+
+    if (head.val == head.next.val) {
+        head.next = deleteDuplicates(head.next.next)
+        return head
+    } else {
+        head.next = deleteDuplicates(head.next)
+        return head
+    }
+}
+
+
+
+
+var flatten = function(head) {
+    var p = head
+    while(p) {
+        if(p.child) {
+            var c = flatten(p.child)
+            var q = p.next
+            p.next = c
+            c.prev = p
+            //p.child = null
+            while(c.next) {
+                c = c.next
+            }
+            if(q) {
+                c.next = q
+                q.prev = c
+            }
+            p = q
+        } else {
+            p = p.next  
+        }
+    }
+    return head    
+};

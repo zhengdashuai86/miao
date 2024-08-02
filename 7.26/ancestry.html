@@ -1,0 +1,370 @@
+<script src="./ancestry.js"></script>
+<script>
+  var ancestry = JSON.parse(ANCESTRY_FILE)
+
+  function filter(array, test) {
+    var result = []
+    for (var i = 0; i<array.length;i ++){  
+      if (  test(array[i], i, array)  ) {
+        result.push(array[i])
+      }
+    }
+    console.log(result)
+  }
+
+  function map(array, transform) {
+    // 将数组中的每个值通过transform转换为另一个值并放入新的数组返回
+    var result = []
+    for (var i = 0 ; i < array.length; i++) {
+      result.push(   transform(array[i], i, array)   )
+    }
+    return result 
+  }
+
+
+  // var result = 0
+  // for (var i = 0; i < array.length; i++) {
+  //   result = result + array[i]
+  // }
+  // console.log(result)
+
+  
+
+  // var result = 1
+  // for (var i = 0; i < array.length; i++) {
+  //   result = result * array[i]
+  // }
+  // console.log(result)
+
+
+  
+
+  // var result = -Infinity
+  // for (var i = 0; i < array.length; i++) {
+  //   result = Math.max(result, array[i])
+  // }
+  // console.log(result)
+
+
+  
+  function reduce(array, computation, initial) {
+    var result = initial
+    for (var i = 0; i < array.length; i++) {
+      result = computation(result, array[i], i, array)
+    }
+    return result
+  }
+  function reduce(array, computation, initial) {
+    var start = 0
+
+    if (initial === undefined) {
+      initial = array[0]
+      start = 1
+    }
+
+    // var result = initial
+    for (var i = start; i < array.length; i++) {
+      initial = computation(initial, array[i], i, array)
+    }
+
+    return initial
+  }
+
+
+  function average(numbers) {
+    return numbers.reduce((a, b) => a + b) / numbers.length
+  }
+
+  // 这个avg函数可以用于传给reduce以实现计算数值数组的平均值
+  var avg = (avg, it, i) => (avg * i + it) / (i + 1)
+
+  function bind(f, ...fixedArgs) {
+    return function(...args) {
+      return f(...fixedArgs, ...args)
+    }
+  }
+
+  // [1,2,3].reduce(+) 
+  // 运算符与函数的作用是差不多的
+  // 二元运算符接收两个运算数，得出一个运算结果
+  // 函数可以接收两个参数，返回一个值
+  // 运算符可以认为是某种特殊的函数
+  // 只是它执行都是最基础的运算
+  // 但js中运算符不能直接当函数使用或传递
+  // 不过某些语言是可以的
+  // 甚至某些语言还可以自定义运算符的功能（c++）
+
+
+  function flatten(arrays) {
+    var result = []
+    for (var array of arrays) {
+      for (var item of array) {
+        result.push(item)
+      }
+    }
+    return result
+  }
+  function flatten2(arrays) {
+    var result = []
+    for (var array of arrays) {
+      result.push(...array)
+    }
+    return result
+  }
+  function flatten3(arrays) {
+    var result = []
+    for (var array of arrays) {
+      result = result.concat(array)
+    }
+    return result
+  }
+  function flatten4(arrays) {
+    return arrays.reduce((result, array) => {
+      return result.concat(array)
+    })
+  }
+  function flatten5(arrays) {
+    return arrays.reduce((result, array) => {
+      return [...result, ...array]
+    }, [])
+  }
+  function flatten6(arrays) {
+    return [].concat(...arrays)
+  }
+
+
+  function flattenDeep(arrays) {
+    return arrays.reduce((result, array) => {
+      if (Array.isArray(array)) {
+        return [...result, ...flattenDeep(array)]
+      } else {
+        return [...result, array]
+      }
+    }, [])
+  }
+
+
+  function flattenDeep2(arrays) {
+    var result = []
+    for (var array of arrays) {
+      if (Array.isArray(array)) {
+        for (var item of flattenDeep2(array)) {
+          result.push(item)
+        }
+      } else {
+        result.push(array)
+      }
+    }
+    return result
+  }
+
+
+  function groupBy(array, predicate/*谓语(用来限定的),由这个函数来决定每个元素在哪个分组，它应该返回分组名称*/) {
+    var obj = {}
+
+    for (var i = 0; i < array.length; i++) {
+      var groupName = predicate(array[i], i, array)
+      if (groupName in obj) {
+        obj[groupName].push(array[i])
+      } else {
+        obj[groupName] = [  array[i]  ]
+      }
+    }
+
+    return obj
+  }
+
+  function mapObject(obj, mapper) {
+    var result = {}
+
+    for (var key in obj) {
+      var mapped = mapper(obj[key], key)
+      result[key] = mapped
+    }
+
+    return result
+  }
+
+  function lifeExpectance() {
+    var result = mapObject(  groupBy(ancestry,  p => Math.ceil(p.died / 100) ),    人们 => {
+      return 人们.map( 人 => {
+        return 人.died - 人.born
+      }).reduce(avg)
+    })  
+
+    console.log(result)
+  }
+
+  function every(array, predicate) {
+    for (var i = 0; i < array.length; i++) {
+      if (!predicate(array[i], i, array)) {
+        return false
+      }
+    }
+    return true
+  }
+
+  function every2(array, f) {
+    return array.reduce((result, item, i) => {
+      return result && f(item, i, array)
+    }, true)
+  }
+
+  function some2(array, f) {
+    return array.reduce((result, item, i) => {
+      return result || f(item, i, array)
+    }, false)
+  }
+
+
+  function isOdd(x) {
+    return x % 2 == 1
+  }
+  
+  // 返回一个对原函数运算结果取反的函数
+  function negate(f) {
+    return function (...args) {
+      return !f(...args)
+    }
+  }
+
+  var isEven = negate(isOdd) 
+
+  function every3(array, f) {
+    return !some(array, negate(f))
+  }
+  function every4(array, f) {
+    return !some(array, (...args) => !f(...args))
+  }
+  function some3(array, f) {
+    return !every(array, netage(f))
+  }
+
+  function some(array, predicate) {
+    for (var i = 0; i < array.length; i++) {
+      if (predicate(array[i], i, array)) {
+        return true
+      }
+    }
+    return false
+  }
+
+
+  var byName = {}
+  for (var p of ancestry) {
+    byName[p.name] = p
+  }
+
+  function motherChildAgeDifference() {
+    var result = ancestry.filter(person => { // 过滤出能找到其母亲信息的人
+      return byName[person.mother]
+    }).map(person => { // 把每个人映射为其与其母亲的年龄差
+      var motherObj =  byName[person.mother]
+      return person.born - motherObj.born
+    }).reduce(avg) // 求所有年龄差的平均值
+
+    console.log(result)
+  }
+
+  function keyBy(array, predicate) {
+    var obj = {}
+
+    for (var i = 0 ; i < array.length; i++) {
+      var key = predicate(array[i], i, array)
+      obj[key]  = array[i]
+    }
+
+    return obj 
+  }
+
+  // 计算person有多少基因来自于PvH
+  function reduceAncestry(person, f, defaultValue) {
+    function valueFor(person) {
+      if (!person) {
+        return defaultValue
+      }
+      var fromFather = valueFor( byName[person.father] )
+      var fromMother = valueFor( byName[person.mother] )
+      return f(
+        person,
+        fromFather,
+        fromMother
+      )
+    }
+
+    return valueFor(person)
+  }
+
+</script>
+
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    var map = {} // 记录窗口范围内每个字符出现的次数
+    var i = 0
+    var max = 0
+
+    for (var j = 0; j < s.length; j++) {
+        var c = s[j]
+        if (c in map) {
+            map[c]++
+            if (map[c] == 2) {
+                while (i < j) {
+                    var c = s[i]
+                    i++
+                    map[c]--
+                    if (map[c] === 1) { // 如果满足这个条件说明它之前出现了两次
+                        break
+                    }
+                }
+            } else {
+                if (j - i + 1 > max) {
+                    max = j - i + 1
+                }
+            }
+        } else {
+            map[c] = 1
+            if (j - i + 1 > max) {
+                max = j - i + 1
+            }
+        }
+    }
+
+    return max
+};
+
+
+
+
+var lengthOfLongestSubstring = function(s) {
+  var map = {} // 记录窗口范围内每个字符出现的次数
+  var i = 0
+  var max = 0
+
+  for (var j = 0; j < s.length; j++) {
+      var c = s[j]
+      if (c in map) {
+          map[c]++
+          if (map[c] == 2) {
+              while (i < j) {
+                  var c = s[i]
+                  i++
+                  map[c]--
+                  if (map[c] === 1) { // 如果满足这个条件说明它之前出现了两次
+                      break
+                  }
+              }
+          }
+      } else {
+          map[c] = 1
+      }
+      if (j - i + 1 > max) {
+          max = j - i + 1
+      }
+  }
+
+  return max
+};

@@ -1,0 +1,19 @@
+https://leetcode.cn/problems/valid-anagram/
+https://leetcode.cn/problems/bulls-and-cows/
+https://leetcode.cn/problems/word-pattern/
+https://leetcode.cn/problems/isomorphic-strings/
+https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+
+
+这几个都是拿对象做映射的题目
+
+function isEqual(a, b) {
+  // 判断a,b是否相同,如果是对象,看内容是否相同
+  // 即深对比
+}
+function deepCopy(a) {
+  // 把a深复制
+}
+function random() {
+  // 让这个函数每次返回的值看起来是随机的
+}

@@ -178,7 +178,6 @@
       return false 
     } 
     let reversed = 0
-    let original = x
     while (x>reversed){
       reversed = reversed*10+x%10
       x = Math.floor(x/10)
@@ -249,4 +248,35 @@
     }
     return result
     };
+</script>
+<script type="计数质数">
+  var countPrimes = function (n) {
+    let a = 0
+    for (let i=2;i<n;i++){
+      a += isPrime(i)? 1:0
+    }
+    return a
+  };
+  const isPrime = (x)=> {
+    for (let i =2;i*i<=x;i++){
+      if (x%i==0){
+        return false
+      }
+    }
+    return true
+  }
+  
+</script>
+<script type="最小操作次数使数组元素相等">
+  var minMoves = function (nums) {
+    const minNum = Math.min(...nums)
+    let res = 0
+    for (num of nums){
+      res += num-minNum
+    }
+    return res
+    };
+</script>
+<script>
+
 </script>

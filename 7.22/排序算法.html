@@ -1,0 +1,91 @@
+<!-- 排序算法 -->
+<script>
+
+  //交换数组的第i和第j项
+  function swap(array, i, j) {
+    var t = array[i]
+    array[i] = array[j]
+    array[j] = t
+  }
+
+  function randomArray(n) {
+    var result = []
+    for (var i = 0; i < n; i++) {
+      result.push(Math.random() * n | 0)
+    }
+    return result
+  }
+
+  function isSorted(array) {
+    for (var i = 1; i < array.length; i++) {
+      if (array[i] < array[i - 1]) {
+        return false
+      }
+    }
+    return true
+  }
+
+  /**
+   * 冒泡排序
+   * 空间复杂度：O(1)，因为使用了固定数量的变量
+   * 时间复杂度：O(n*n)
+   */
+  function bubbleSort(array) {
+    for (var end = array.length - 1; end > 0; end--) {
+      var swapped = false
+      for (var i = 0; i < end; i++) {
+        if (array[i] > array[i + 1]) {
+          swap(array, i, i + 1)
+          swapped = true
+        }
+      }
+      if (swapped == false) {
+        break
+      }
+    }
+
+    return array
+  }
+
+  /**
+   * 
+   * 选择排序：依次选择数组中更大的元素，放在最前面
+   * 空间复杂度：O(1)，因为使用了固定数量的变量
+   * 时间复杂度：O(n*n)
+   */
+  function selectSort(array) {
+    for (i = 0; i < array.length - 1; i++) {
+      var minIdx = i
+      for (var j = i + 1; j < array.length; j++) {
+        if (array[j] < array[minIdx]) {
+          minIdx = j
+        }
+      }
+      swap(array, i, minIdx)
+    }
+    return array
+  }
+
+  
+  /**
+   * 
+   * 插入排序：每次选择下一个元素将其插入到有序部分的正确位置
+   * 空间复杂度：O(1)，因为使用了固定数量的变量
+   * 时间复杂度：O(n*n)
+   */
+  function insertSort(array) {
+    // i指向当前需要插入到有序部分的数
+    for (var i = 1; i < array.length; i++) {
+      for (var j = i - 1; j >= 0; j--) {
+        if (array[j] > array[j + 1]) {
+          swap(array, j, j + 1)
+        } else {
+          break
+        }
+      }
+    }
+    return array
+  }
+
+  // https://leetcode.cn/problems/sort-an-array/description/
+</script>

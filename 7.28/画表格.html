@@ -1,0 +1,223 @@
+
+
+<script>
+
+function rowHeights ( rows ) {
+return rows .map( function (row) {
+return row. reduce ( function (max , cell ) {
+return Math .max(max , cell . minHeight ());
+}, 0);
+});
+}
+function colWidths ( rows ) {
+return rows [0]. map( function (_, i) {
+return rows . reduce ( function (max , row) {
+return Math .max(max , row[i]. minWidth ());
+}, 0);
+});
+}
+
+
+function drawTable ( rows ) {
+var heights = rowHeights ( rows );
+var widths = colWidths ( rows );
+function drawLine (blocks , lineNo ) {
+return blocks .map( function ( block ) {
+return block [ lineNo ];
+}). join (" ");
+}
+function drawRow (row , rowNum ) {
+var blocks = row.map( function (cell , colNum ) {
+return cell . draw ( widths [ colNum ], heights [ rowNum ]);
+});
+return blocks [0]. map( function (_, lineNo ) {
+return drawLine (blocks , lineNo );
+}). join ("\n");
+}
+return rows .map( drawRow ). join ("\n");
+}
+
+
+
+function TextCell(text) {
+  this.lines = text.split('\n')
+}
+
+TextCell.prototype.minWidth = function() {
+  return Math.max( ...this.lines.map(it => it.length) )
+}
+TextCell.prototype.minHeight = function() {
+  return this.lines.length
+}
+TextCell.prototype.draw = function(width, height) {
+  var result = []
+  for (var i = 0; i < height; i++) {
+    var line = this.lines[i] || ''
+    while(line.length < width) {
+      line += ' '
+    }
+    result.push(line)
+  }
+  return result
+}
+
+var tc = new TextCell('foo\nbar')
+// tc.minWidth() -> 3
+// tc.minHeight() -> 2
+// tc.draw(5,6) -> [
+//   'foo  '
+//   'bar  '
+//   '     '
+//   '     '
+//   '     '
+//   '     '
+// ]
+
+function BorderedCell(text) {
+  this.lines = text.split('\n')
+}
+BorderedCell.prototype.minWidth = function() {
+  return Math.max( ...this.lines.map(line => line.length) ) + 2
+}
+BorderedCell.prototype.minHeight = function() {
+  return this.lines.length + 2
+}
+BorderedCell.prototype.draw = function (width, height) {
+  var borderTop = '-'.repeat(width)
+  var result = [borderTop]
+  for (var i = 0; i < height - 2; i++) {
+    var line = this.lines[i] || ''
+    line = '|' + line
+    while(line.length < width - 1) {
+      line += ' '
+    }
+    line += '|'
+    result.push(line)
+  }
+  result.push(borderTop)
+  return result
+}
+
+Number.prototype.minWidth = function () {
+  return this.toString().length
+}
+Number.prototype.minHeight = function () {
+  return 1
+}
+Number.prototype.draw = function (width, height) {
+  var result = []
+  var numStr = this.toString()
+  while (numStr.length < width) {
+    numStr = ' ' + numStr
+  }
+  result.push(numStr)
+  for (var i = 0; i < height - 1; i++) {
+    result.push(' '.repeat(width))
+  }
+  return result
+}
+
+var MOUNTAINS = [{
+    name: "Kilimanjaro",
+    height: 5895,
+    country: "Tanzania"
+}, {
+    name: "Everest",
+    height: 8848,
+    country: "Nepal"
+}, {
+    name: "Mount Fuji",
+    height: 3776,
+    country: "Japan"
+}, {
+    name: "Mont Blanc",
+    height: 4808,
+    country: "Italy/France"
+}, {
+    name: "Vaalserberg",
+    height: 323,
+    country: "Netherlands"
+}, {
+    name: "Denali",
+    height: 6168,
+    country: "United States"
+}, {
+    name: "Popocatepetl",
+    height: 5465,
+    country: "Mexico"
+}];
+
+var table = [
+  [2,new BorderedCell('foo\nbar'),new BorderedCell('ddfoo\nbar'),],
+  [25555,Math.PI,new BorderedCell('foo\ndbar'),],
+  [new BorderedCell('foo\nbar\naaaa'),new BorderedCell('foowef\nbar'),new BorderedCell('wefoo\nbar'),],
+  [new BorderedCell('foo\nbar'),new BorderedCell('foo\nbar\nbwer'),new BorderedCell('sffoo\nbar'),],
+]
+
+
+function dataTable(array) {
+
+  var mountainTable = []
+  var mountainTableHeader = []
+  for (var key in array[0]) {
+    mountainTableHeader.push( new BorderedCell(key) )
+  }
+  mountainTable.push(mountainTableHeader)
+
+  for (var m of array) {
+    var tableRow = []
+    for (var key in m) {
+      if (typeof m[key] == 'number') {
+        tableRow.push(m[key])
+      } else {
+        tableRow.push(new TextCell(  m[key] ))
+      }
+    }
+    mountainTable.push(tableRow)
+  }
+  return mountainTable
+}
+
+var mt = dataTable(MOUNTAINS)
+
+
+function Vector(x, y) {
+}
+Vector.prototype.plus = function() {
+  
+}
+Vector.prototype.minus = function() {
+  
+}
+Vector.prototype.length = function() {
+  
+}
+
+var v1 = new Vector(1,2)
+var v2 = new Vector(3,-4)
+
+var v3 = v1.plus(v2)
+var v4 = v2.minus(v1)
+
+var l = v4.length()
+
+
+
+// 表示一个复数(complex number)
+function Complex(real, imag) {
+
+}
+var c1 = new Complex(4, 5)
+var c2 = new Complex(1, -2)
+
+var c3 = c1.plus(c2)
+var c4 = c1.minus(c2)
+var c5 = c1.multiple(c2)
+var c6 = c1.div(c2)
+
+console.log(c6.toString()) // 2+3i
+
+
+
+
+</script>
